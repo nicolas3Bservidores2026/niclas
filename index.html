@@ -3,281 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santos FC - Arquivo Histórico (ZOADO)</title>
+    <title>Timão Web - Todo Poderoso</title>
     
-    <!-- CSS Incorporado -->
+    <!-- ESTILO CSS (Visual do Site Alvinegro) -->
     <style>
-        /* Configurações Gerais */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        :root {
+            --cor-principal: #111111;
+            --cor-secundaria: #ffffff;
+            --cor-cinza: #f4f4f4;
+            --cor-texto: #333333;
+            --cor-borda: #dddddd;
         }
 
         body {
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-cinza);
+            color: var(--cor-texto);
         }
 
         /* Cabeçalho */
         header {
-            background-color: #000;
-            color: #fff;
-            padding: 40px 0;
+            background-color: var(--cor-principal);
+            color: var(--cor-secundaria);
+            padding: 20px;
             text-align: center;
-            border-bottom: 5px solid #d32f2f; /* Vermelho de alerta */
+            border-bottom: 5px solid #333;
         }
 
         header h1 {
-            font-size: 2.5rem;
-            text-transform: uppercase;
+            margin: 0;
+            font-size: 2.2rem;
             letter-spacing: 2px;
         }
 
-        .subtitulo-zoado {
-            color: #ffeb3b !important; /* Texto amarelo chamativo */
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-top: 10px;
+        header p {
+            margin: 5px 0 0 0;
+            font-style: italic;
+            opacity: 0.8;
         }
 
-        /* Menu de Navegação */
-        nav {
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav a {
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 15px;
-            text-transform: uppercase;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #d32f2f;
-        }
-
-        /* Destaques de Zoeira na tela */
-        .tag-zoeira {
-            background-color: #d32f2f;
-            color: #fff;
-            font-size: 0.8rem;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: bold;
-            vertical-align: middle;
-            margin-left: 10px;
-            text-transform: uppercase;
-        }
-
-        .alerta-b {
-            background-color: #1976d2; /* Azul chamativo */
-            color: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: bold;
-            margin-bottom: 30px;
-            border: 3px dashed #000;
-        }
-
-        /* Conteúdo Principal */
-        .container {
-            max-width: 1000px;
+        /* Container Principal */
+        .main-container {
+            max-width: 900px;
             margin: 30px auto;
             padding: 0 20px;
         }
 
-        section {
-            background: #fff;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-left: 8px solid #000;
+        /* Seções de Cartões */
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--cor-principal);
         }
 
-        /* Seções zoadas recebem destaque com fundo claro e borda vermelha */
-        .secao-zoada {
-            border-left: 8px solid #d32f2f !important;
-            background-color: #fff5f5;
-        }
-
-        h2 {
-            color: #000;
-            border-bottom: 2px solid #000;
+        .card h2 {
+            margin-top: 0;
+            color: var(--cor-principal);
+            border-bottom: 2px solid var(--cor-cinza);
             padding-bottom: 10px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
+        }
+
+        /* Estilo customizado para a imagem injetada ficar bem grande */
+        .imagem-zoacao-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .imagem-zoacao-container img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            border-radius: 8px;
+            border: 3px dashed #ff0000;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Grid de Próximos Jogos */
+        .jogos-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .jogo-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 12px;
+            background-color: var(--cor-cinza);
+            border-radius: 8px;
+            border: 1px solid var(--cor-borda);
         }
 
-        /* Estilo da área de Títulos */
-        .titulos-lista {
-            list-style: none;
+        .time-confronto {
+            font-weight: bold;
+            font-size: 1.1rem;
         }
 
-        .titulos-lista li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
+        .detalhes-jogo {
+            text-align: right;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Seção Interativa de Títulos */
+        .titulo-contador {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
         }
 
-        .titulos-lista li:last-child {
-            border-bottom: none;
-        }
-
-        .qtd {
-            background: #d32f2f;
-            color: #fff;
-            padding: 2px 10px;
-            border-radius: 20px;
-            font-weight: bold;
-        }
-
-        /* Seção Interativa */
-        .interativo {
-            text-align: center;
-        }
-
-        .btn-santos {
-            background-color: #d32f2f;
-            color: #fff;
-            border: 2px solid #d32f2f;
-            padding: 12px 24px;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            margin-top: 15px;
-        }
-
-        .btn-santos:hover {
-            background-color: #fff;
-            color: #d32f2f;
-        }
-
-        #mensagem-zoeira {
-            margin-top: 25px;
-            font-size: 1.4rem;
-            font-weight: bold;
-            min-height: 40px;
-            color: #fff; 
+        .contador-box {
+            background-color: var(--cor-principal);
+            color: white;
             padding: 15px;
-            background-color: #d32f2f;
-            border-radius: 5px;
-            display: none;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            text-align: center;
+            min-width: 120px;
+            flex: 1;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .contador-box:hover {
+            transform: scale(1.05);
+            background-color: #222;
+        }
+
+        .contador-numero {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .contador-nome {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
         }
 
         /* Rodapé */
         footer {
-            background-color: #000;
-            color: #fff;
             text-align: center;
-            padding: 20px 0;
-            margin-top: 5px;
+            padding: 20px;
+            background-color: var(--cor-principal);
+            color: white;
+            font-size: 0.9rem;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Cabeçalho do Site -->
+    <!-- CORPO HTML (Estrutura da Página Original Mantida) -->
     <header>
-        <h1>Santos Futebol Clube</h1>
-        <p class="subtitulo-zoado">⚠️ AVISO: PROIBIDA A ENTRADA DE MENORES DE 70 ANOS ⚠️</p>
+        <h1>🛑 PÁ! ACESSO NEGADO - INVASÃO DETECTADA</h1>
+        <p>"Salve o Corinthians... o freguês dos fregueses!"</p>
     </header>
 
-    <!-- Menu de Navegação rápida -->
-    <nav>
-        <a href="#historia">Asilo da Vila</a>
-        <a href="#titulos">Museu do Futebol Antigo</a>
-        <a href="#idolos">Aposentados Recentes</a>
-        <a href="#interagir">Balão de Oxigênio</a>
-    </nav>
-
-    <!-- Corpo da Página -->
-    <div class="container">
-
-        <!-- Banner de Alerta da Série B bem chamativo -->
-        <div class="alerta-b">
-            ⚠️ NOTA DO SISTEMA: Este site foi rebaixado temporariamente para a segunda divisão de servidores devido ao desempenho do clube.
+    <div class="main-container">
+        
+        <!-- Cartão 1: Substituído pela Imagem do Link Enviado -->
+        <div class="card" style="border-left-color: #ff0000;">
+            <h2>História Recente Atualizada</h2>
+            <p>Abaixo está registrado o momento exato em que o sistema foi modificado para exibir a nova realidade de Itaquera:</p>
+            <div class="imagem-zoacao-container">
+                <!-- LINK DA IMAGEM ADICIONADO AQUI -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbQhG7GwB-s7JN5qc7vOlAb2mQwFa32zYdHBrsLn-43mHIAkwqHW7rWfU&s=10" alt="Memphis Depay errando o pênalti">
+                <p style="font-weight: bold; color: #ff0000; margin-top: 10px;">🚨 URGENTE: Chute do Memphis foi parar em outra página web!</p>
+            </div>
         </div>
 
-        <!-- Seção História Modificada -->
-        <section id="historia" class="secao-zoada">
-            <h2>História Jurássica <span class="tag-zoeira">Meme do INSS</span></h2>
-            <p>Fundado em 1912, o clube se destaca por ter uma torcida jovem... que já está na fila da terceira dose da vacina da gripe. É o único estádio do Brasil que substituiu a venda de cerveja por distribuição gratuita de Dorflex e chá de camomila na arquibancada.</p>
-        </section>
+        <!-- Cartão 2: Próximos Compromissos Modificados -->
+        <div class="card">
+            <h2>Próximos Desesperos</h2>
+            <div class="jogos-grid">
+                <div class="jogo-item">
+                    <div class="time-confronto">Corinthians × Série B</div>
+                    <div class="detalhes-jogo">
+                        <div>Campeonato de Rebaixamento</div>
+                        <strong>Domingo, 16:00</strong>
+                    </div>
+                </div>
+                <div class="jogo-item">
+                    <div class="time-confronto">Cobranças de Pênalti × Memphis Depay</div>
+                    <div class="detalhes-jogo">
+                        <div>Clássico do Isolamento</div>
+                        <strong>Quarta-feira, 21:45</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <!-- Seção Títulos Modificada -->
-        <section id="titulos" class="secao-zoada">
-            <h2>Baú de Troféus Mofados <span class="tag-zoeira">Preto e Branco</span></h2>
-            <ul class="titulos-lista">
-                <li><span>Mundiais gravados antes da TV colorida existir</span> <span class="qtd">2</span></li>
-                <li><span>Libertadores na época em que o Orkut dominava a internet</span> <span class="qtd">3</span></li>
-                <li><span>Campeonatos Brasileiros calculados em pergaminhos</span> <span class="qtd">8</span></li>
-                <li><span>Visitas agendadas para jogar na Terça-Feira à noite</span> <span class="qtd">Série B</span></li>
-            </ul>
-        </section>
-
-        <!-- Seção Ídolos Modificada -->
-        <section id="idolos">
-            <h2>Quadro de Lembranças Históricas</h2>
-            <p>O torcedor santista vive de lembranças, já que olhar para a tabela do campeonato dá tontura:</p>
-            <br>
-            <ul>
-                <li><strong>Pelé:</strong> O Rei do Futebol. Quem viu ele jogar no estádio provavelmente hoje não lembra onde guardou as chaves de casa.</li>
-                <li><strong>Neymar Jr:</strong> O último craque que jogou lá antes de preferir passar o tempo em cruzeiros e festas longe da Baixada.</li>
-            </ul>
-        </section>
-
-        <!-- Seção Interativa Consertada -->
-        <section id="interagir" class="secao-zoada interativo">
-            <h2>Painel Interativo de Desculpas Oficiais <span class="tag-zoeira">Clique Aqui</span></h2>
-            <p>O time passou vergonha de novo? Escolha uma justificativa automática gerada pela nossa diretoria artificial:</p>
-            <button class="btn-santos" onclick="gerarDesculpa()">Gerar Desculpa Aleatória</button>
-            <div id="mensagem-zoeira"></div>
-        </section>
+        <!-- Cartão 3: Painel de Conquistas (Zoadas no JavaScript) -->
+        <div class="card">
+            <h2>Galeria de Glórias Penhoradas</h2>
+            <p>Clique nos blocos para simular a resposta do sistema de auditoria sobre as taças:</p>
+            
+            <div class="titulo-contador">
+                <div class="contador-box" onclick="celebrarTitulo('Mundial')">
+                    <span class="contador-numero" id="qtd-mundial">2</span>
+                    <span class="contador-nome">Mundiais (A procurar via Fax)</span>
+                </div>
+                <div class="contador-box" onclick="celebrarTitulo('Libertadores')">
+                    <span class="contador-numero" id="qtd-liberta">1</span>
+                    <span class="contador-nome">Libertadores (Demorou um século)</span>
+                </div>
+                <div class="contador-box" onclick="celebrarTitulo('Campeonato Brasileiro')">
+                    <span class="contador-numero" id="qtd-br">7</span>
+                    <span class="contador-nome">Brasileiros</span>
+                </div>
+                <div class="contador-box" onclick="celebrarTitulo('Copa do Brasil')">
+                    <span class="contador-numero" id="qtd-copabrasil">3</span>
+                    <span class="contador-nome">Copas do Brasil</span>
+                </div>
+            </div>
+        </div>
 
     </div>
 
-    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2026 Memorial da Vila Belmiro. Página 100% focada em zoar o Peixe.</p>
+        <p>Vai Corinthians... parcelar as contas! © 2026 — Página Modificada com Sucesso.</p>
     </footer>
 
-    <!-- JavaScript Interativo Corrigido -->
+    <!-- JAVASCRIPT ORIGINAL ALTERADO APENAS NOS ALERTAS -->
     <script>
-        function gerarDesculpa() {
-            const painel = document.getElementById('mensagem-zoeira');
-            
-            const desculpas = [
-                "🚨 É OFICIAL: 'O jogo passou do horário de dormir do nosso conselho deliberativo (20:30h), por isso o time dormiu em campo.'",
-                "🚨 É OFICIAL: 'O elenco principal não se concentrou porque estava ajudando a renovar a carteira de habilitação dos sócios.'",
-                "🚨 É OFICIAL: 'Fomos derrotados porque confundiram a bola oficial com uma bocha de praia.'",
-                "🚨 É OFICIAL: 'O atacante perdeu o gol porque a luz dos refletores bateu na careca do zagueiro rival e o cegou.'"
-            ];
-            
-            const fraseAleatoria = desculpas[Math.floor(Math.random() * desculpas.length)];
-            
-            painel.innerText = fraseAleatoria;
-            painel.style.display = 'block';
+        function celebrarTitulo(nomeTitulo) {
+            if(nomeTitulo === 'Mundial') {
+                alert("❌ ERRO 404: Passaporte para o primeiro mundial não encontrado no servidor!");
+            } else if(nomeTitulo === 'Libertadores') {
+                alert("⏳ Erro de tempo limite: Demorou 102 anos para carregar o primeiro registro!");
+            } else {
+                alert(`🏆 Alerta do Oficial de Justiça: O título de ${nomeTitulo} foi retido para cobrir dívidas de marmitas antigas!`);
+            }
         }
     </script>
 </body>
