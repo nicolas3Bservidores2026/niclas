@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santos FC - O Alvinegro Praiano</title>
+    
+    <!-- CSS Incorporado -->
+    <style>
+        /* Configurações Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid #b3924e; /* Toque dourado pelas glórias */
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-style: italic;
+            color: #ccc;
+        }
+
+        /* Menu de Navegação */
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #b3924e;
+        }
+
+        /* Conteúdo Principal */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: #fff;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #000;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        /* Estilo da área de Títulos */
+        .titulos-lista {
+            list-style: none;
+        }
+
+        .titulos-lista li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .titulos-lista li:last-child {
+            border-none: none;
+        }
+
+        .qtd {
+            background: #000;
+            color: #fff;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* Seção Interativa (JavaScript) */
+        .interativo {
+            text-align: center;
+        }
+
+        .btn-santos {
+            background-color: #000;
+            color: #fff;
+            border: 2px solid #000;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            margin-top: 15px;
+        }
+
+        .btn-santos:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        #mensagem-hino {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            min-height: 30px;
+            color: #000;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho do Site -->
+    <header>
+        <h1>Santos Futebol Clube</h1>
+        <p>O Rei do Futebol • O Time da Virada</p>
+    </header>
+
+    <!-- Menu de Navegação rápida -->
+    <nav>
+        <a href="#historia">História</a>
+        <a href="#titulos">Títulos</a>
+        <a href="#idolos">Ídolos</a>
+        <a href="#interagir">Interagir</a>
+    </nav>
+
+    <!-- Corpo da Página -->
+    <div class="container">
+
+        <!-- Seção História -->
+        <section id="historia">
+            <h2>História</h2>
+            <p>Fundado em <strong>14 de abril de 1912</strong>, o Santos Futebol Clube, carinhosamente conhecido como Peixe ou Alvinegro Praiano, tornou-se uma das marcas mais famosas do futebol mundial. Conhecido por seu futebol ofensivo e vistoso, o clube parou guerras na década de 1960 e encantou o planeta.</p>
+        </section>
+
+        <!-- Seção Títulos -->
+        <section id="titulos">
+            <h2>Principais Conquistas</h2>
+            <ul class="titulos-lista">
+                <li><span>Mundiais de Clubes</span> <span class="qtd">2</span></li>
+                <li><span>Copa Libertadores da América</span> <span class="qtd">3</span></li>
+                <li><span>Campeonatos Brasileiros</span> <span class="qtd">8</span></li>
+                <li><span>Copa do Brasil</span> <span class="qtd">1</span></li>
+                <li><span>Campeonatos Paulistas</span> <span class="qtd">22</span></li>
+            </ul>
+        </section>
+
+        <!-- Seção Ídolos -->
+        <section id="idolos">
+            <h2>Grandes Ídolos</h2>
+            <p>Nenhum clube no mundo revelou tantos talentos ou teve a honra de contar com o maior de todos. O Santos é a casa de:</p>
+            <br>
+            <ul>
+                <li><strong>Pelé:</strong> O Rei do Futebol, maior jogador de todos os tempos, que marcou a história do esporte vestindo a camisa 10 santista.</li>
+                <li><strong>Neymar Jr:</strong> O craque moderno que encantou o Brasil com os títulos da Copa do Brasil e da Libertadores.</li>
+                <li><strong>Pepe:</strong> O "Canhão da Vila", segundo maior artilheiro da história do clube.</li>
+                <li><strong>Coutinho:</strong> O parceiro perfeito do Rei Pelé no ataque dos sonhos.</li>
+            </ul>
+        </section>
+
+        <!-- Seção Interativa (JavaScript) -->
+        <section id="interagir" class="interativo">
+            <h2>Grito de Torcida</h2>
+            <p>Clique no botão abaixo para cantar o hino com o Peixe!</p>
+            <button class="btn-santos" onclick="cantarHino()">Soltar o Grito</button>
+            <div id="mensagem-hino"></div>
+        </section>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Santos FC Fanpage. Feito com orgulho alvinegro.</p>
+    </footer>
+
+    <!-- JavaScript Incorporado -->
+    <script>
+        function cantarHino() {
+            // Elemento onde a frase vai aparecer
+            const painelMensagem = document.getElementById('mensagem-hino');
+            
+            // Frase clássica do hino do Santos
+            const trechoHino = "🎶 Agora quem dá o bola é o Santos... O Santos é o novo campeão! 🐳⭐️";
+            
+            // Insere o texto no HTML dinamicamente
+            painelMensagem.innerText = trechoHino;
+            
+            // Efeito visual rápido mudando a cor do texto para dourado e voltando
+            painelMensagem.style.color = '#b3924e';
+            setTimeout(() => {
+                painelMensagem.style.color = '#000';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
