@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santos FC - O Alvinegro Praiano</title>
+    <title>Santos FC - Arquivo Histórico (ZOADO)</title>
     
     <!-- CSS Incorporado -->
     <style>
@@ -25,9 +25,9 @@
         header {
             background-color: #000;
             color: #fff;
-            padding: 20px 0;
+            padding: 40px 0;
             text-align: center;
-            border-bottom: 5px solid #b3924e; /* Toque dourado pelas glórias */
+            border-bottom: 5px solid #d32f2f; /* Vermelho de alerta */
         }
 
         header h1 {
@@ -36,9 +36,11 @@
             letter-spacing: 2px;
         }
 
-        header p {
-            font-style: italic;
-            color: #ccc;
+        .subtitulo-zoado {
+            color: #ffeb3b !important; /* Texto amarelo chamativo */
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 10px;
         }
 
         /* Menu de Navegação */
@@ -62,7 +64,31 @@
         }
 
         nav a:hover {
-            color: #b3924e;
+            color: #d32f2f;
+        }
+
+        /* Destaques de Zoeira na tela */
+        .tag-zoeira {
+            background-color: #d32f2f;
+            color: #fff;
+            font-size: 0.8rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            vertical-align: middle;
+            margin-left: 10px;
+            text-transform: uppercase;
+        }
+
+        .alerta-b {
+            background-color: #1976d2; /* Azul chamativo */
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 30px;
+            border: 3px dashed #000;
         }
 
         /* Conteúdo Principal */
@@ -78,6 +104,13 @@
             margin-bottom: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 8px solid #000;
+        }
+
+        /* Seções zoadas recebem destaque com fundo claro e borda vermelha */
+        .secao-zoada {
+            border-left: 8px solid #d32f2f !important;
+            background-color: #fff5f5;
         }
 
         h2 {
@@ -86,6 +119,9 @@
             padding-bottom: 10px;
             margin-bottom: 20px;
             text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         /* Estilo da área de Títulos */
@@ -101,26 +137,26 @@
         }
 
         .titulos-lista li:last-child {
-            border-none: none;
+            border-bottom: none;
         }
 
         .qtd {
-            background: #000;
+            background: #d32f2f;
             color: #fff;
             padding: 2px 10px;
             border-radius: 20px;
             font-weight: bold;
         }
 
-        /* Seção Interativa (JavaScript) */
+        /* Seção Interativa */
         .interativo {
             text-align: center;
         }
 
         .btn-santos {
-            background-color: #000;
+            background-color: #d32f2f;
             color: #fff;
-            border: 2px solid #000;
+            border: 2px solid #d32f2f;
             padding: 12px 24px;
             font-size: 1rem;
             font-weight: bold;
@@ -133,15 +169,20 @@
 
         .btn-santos:hover {
             background-color: #fff;
-            color: #000;
+            color: #d32f2f;
         }
 
-        #mensagem-hino {
-            margin-top: 20px;
-            font-size: 1.2rem;
+        #mensagem-zoeira {
+            margin-top: 25px;
+            font-size: 1.4rem;
             font-weight: bold;
-            min-height: 30px;
-            color: #000;
+            min-height: 40px;
+            color: #fff; 
+            padding: 15px;
+            background-color: #d32f2f;
+            border-radius: 5px;
+            display: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         /* Rodapé */
@@ -159,83 +200,84 @@
     <!-- Cabeçalho do Site -->
     <header>
         <h1>Santos Futebol Clube</h1>
-        <p>O Rei do Futebol • O Time da Virada</p>
+        <p class="subtitulo-zoado">⚠️ AVISO: PROIBIDA A ENTRADA DE MENORES DE 70 ANOS ⚠️</p>
     </header>
 
     <!-- Menu de Navegação rápida -->
     <nav>
-        <a href="#historia">História</a>
-        <a href="#titulos">Títulos</a>
-        <a href="#idolos">Ídolos</a>
-        <a href="#interagir">Interagir</a>
+        <a href="#historia">Asilo da Vila</a>
+        <a href="#titulos">Museu do Futebol Antigo</a>
+        <a href="#idolos">Aposentados Recentes</a>
+        <a href="#interagir">Balão de Oxigênio</a>
     </nav>
 
     <!-- Corpo da Página -->
     <div class="container">
 
-        <!-- Seção História -->
-        <section id="historia">
-            <h2>História</h2>
-            <p>Fundado em <strong>14 de abril de 1912</strong>, o Santos Futebol Clube, carinhosamente conhecido como Peixe ou Alvinegro Praiano, tornou-se uma das marcas mais famosas do futebol mundial. Conhecido por seu futebol ofensivo e vistoso, o clube parou guerras na década de 1960 e encantou o planeta.</p>
+        <!-- Banner de Alerta da Série B bem chamativo -->
+        <div class="alerta-b">
+            ⚠️ NOTA DO SISTEMA: Este site foi rebaixado temporariamente para a segunda divisão de servidores devido ao desempenho do clube.
+        </div>
+
+        <!-- Seção História Modificada -->
+        <section id="historia" class="secao-zoada">
+            <h2>História Jurássica <span class="tag-zoeira">Meme do INSS</span></h2>
+            <p>Fundado em 1912, o clube se destaca por ter uma torcida jovem... que já está na fila da terceira dose da vacina da gripe. É o único estádio do Brasil que substituiu a venda de cerveja por distribuição gratuita de Dorflex e chá de camomila na arquibancada.</p>
         </section>
 
-        <!-- Seção Títulos -->
-        <section id="titulos">
-            <h2>Principais Conquistas</h2>
+        <!-- Seção Títulos Modificada -->
+        <section id="titulos" class="secao-zoada">
+            <h2>Baú de Troféus Mofados <span class="tag-zoeira">Preto e Branco</span></h2>
             <ul class="titulos-lista">
-                <li><span>Mundiais de Clubes</span> <span class="qtd">2</span></li>
-                <li><span>Copa Libertadores da América</span> <span class="qtd">3</span></li>
-                <li><span>Campeonatos Brasileiros</span> <span class="qtd">8</span></li>
-                <li><span>Copa do Brasil</span> <span class="qtd">1</span></li>
-                <li><span>Campeonatos Paulistas</span> <span class="qtd">22</span></li>
+                <li><span>Mundiais gravados antes da TV colorida existir</span> <span class="qtd">2</span></li>
+                <li><span>Libertadores na época em que o Orkut dominava a internet</span> <span class="qtd">3</span></li>
+                <li><span>Campeonatos Brasileiros calculados em pergaminhos</span> <span class="qtd">8</span></li>
+                <li><span>Visitas agendadas para jogar na Terça-Feira à noite</span> <span class="qtd">Série B</span></li>
             </ul>
         </section>
 
-        <!-- Seção Ídolos -->
+        <!-- Seção Ídolos Modificada -->
         <section id="idolos">
-            <h2>Grandes Ídolos</h2>
-            <p>Nenhum clube no mundo revelou tantos talentos ou teve a honra de contar com o maior de todos. O Santos é a casa de:</p>
+            <h2>Quadro de Lembranças Históricas</h2>
+            <p>O torcedor santista vive de lembranças, já que olhar para a tabela do campeonato dá tontura:</p>
             <br>
             <ul>
-                <li><strong>Pelé:</strong> O Rei do Futebol, maior jogador de todos os tempos, que marcou a história do esporte vestindo a camisa 10 santista.</li>
-                <li><strong>Neymar Jr:</strong> O craque moderno que encantou o Brasil com os títulos da Copa do Brasil e da Libertadores.</li>
-                <li><strong>Pepe:</strong> O "Canhão da Vila", segundo maior artilheiro da história do clube.</li>
-                <li><strong>Coutinho:</strong> O parceiro perfeito do Rei Pelé no ataque dos sonhos.</li>
+                <li><strong>Pelé:</strong> O Rei do Futebol. Quem viu ele jogar no estádio provavelmente hoje não lembra onde guardou as chaves de casa.</li>
+                <li><strong>Neymar Jr:</strong> O último craque que jogou lá antes de preferir passar o tempo em cruzeiros e festas longe da Baixada.</li>
             </ul>
         </section>
 
-        <!-- Seção Interativa (JavaScript) -->
-        <section id="interagir" class="interativo">
-            <h2>Grito de Torcida</h2>
-            <p>Clique no botão abaixo para cantar o hino com o Peixe!</p>
-            <button class="btn-santos" onclick="cantarHino()">Soltar o Grito</button>
-            <div id="mensagem-hino"></div>
+        <!-- Seção Interativa Consertada -->
+        <section id="interagir" class="secao-zoada interativo">
+            <h2>Painel Interativo de Desculpas Oficiais <span class="tag-zoeira">Clique Aqui</span></h2>
+            <p>O time passou vergonha de novo? Escolha uma justificativa automática gerada pela nossa diretoria artificial:</p>
+            <button class="btn-santos" onclick="gerarDesculpa()">Gerar Desculpa Aleatória</button>
+            <div id="mensagem-zoeira"></div>
         </section>
 
     </div>
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2026 Santos FC Fanpage. Feito com orgulho alvinegro.</p>
+        <p>&copy; 2026 Memorial da Vila Belmiro. Página 100% focada em zoar o Peixe.</p>
     </footer>
 
-    <!-- JavaScript Incorporado -->
+    <!-- JavaScript Interativo Corrigido -->
     <script>
-        function cantarHino() {
-            // Elemento onde a frase vai aparecer
-            const painelMensagem = document.getElementById('mensagem-hino');
+        function gerarDesculpa() {
+            const painel = document.getElementById('mensagem-zoeira');
             
-            // Frase clássica do hino do Santos
-            const trechoHino = "🎶 Agora quem dá o bola é o Santos... O Santos é o novo campeão! 🐳⭐️";
+            const desculpas = [
+                "🚨 É OFICIAL: 'O jogo passou do horário de dormir do nosso conselho deliberativo (20:30h), por isso o time dormiu em campo.'",
+                "🚨 É OFICIAL: 'O elenco principal não se concentrou porque estava ajudando a renovar a carteira de habilitação dos sócios.'",
+                "🚨 É OFICIAL: 'Fomos derrotados porque confundiram a bola oficial com uma bocha de praia.'",
+                "🚨 É OFICIAL: 'O atacante perdeu o gol porque a luz dos refletores bateu na careca do zagueiro rival e o cegou.'"
+            ];
             
-            // Insere o texto no HTML dinamicamente
-            painelMensagem.innerText = trechoHino;
+            const fraseAleatoria = desculpas[Math.floor(Math.random() * desculpas.length)];
             
-            // Efeito visual rápido mudando a cor do texto para dourado e voltando
-            painelMensagem.style.color = '#b3924e';
-            setTimeout(() => {
-                painelMensagem.style.color = '#000';
-            }, 1000);
+            painel.innerText = fraseAleatoria;
+            painel.style.display = 'block';
         }
     </script>
 </body>
